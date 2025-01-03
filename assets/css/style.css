@@ -3,4 +3,210 @@
 @import url("/assets/css/global.css");
 
 :root {
+  --primary: #1cbf97;
+  --border: #d9d9d9;
+  --text: #333;
+  --text-gray: #999;
+  --surface: #f5f5f5;
+}
+
+#wrap {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+}
+.top-notice {
+  padding: 0.2rem 1rem;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.top-notice .icon {
+  width: 15px;
+  height: 15px;
+  background: url(../images/main/speaker.png) center / contain no-repeat;
+}
+.top-notice span {
+  color: #abe050;
+}
+.top-notice .close {
+  width: 45px;
+  height: 45px;
+  background: url(../images/common/close-white.png) center / 10px no-repeat;
+}
+
+/* 헤더 */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+.header .logo {
+  width: 120px;
+  height: 55px;
+  background: url(../images/main/logo.png) center / contain no-repeat;
+}
+.header .btns {
+  display: flex;
+  align-items: center;
+}
+.header .btns a {
+  width: 40px;
+  height: 40px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.header .btns a.customer {
+  background-image: url(../images/common/customer.png);
+}
+.header .btns a.alarm {
+  background-image: url(../images/main/bell.png);
+}
+.header .btns a.alarm.on {
+  background-image: url(../images/main/bell_on.png);
+}
+
+/* 검색 */
+.search-box {
+  margin-top: 2rem;
+}
+.search-box button {
+  border: 2px solid var(--primary);
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  border-radius: 10px;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+}
+.search-box button .zoom {
+  width: 15px;
+  height: 15px;
+  background: url(../images/main/zoom.png) center/ contain no-repeat;
+}
+.search-box button .txt {
+  flex: 1;
+}
+.search-box button .arrow {
+  width: 15px;
+  height: 15px;
+  background: url(../images/main/arrow-right-primary.png) center/ contain
+    no-repeat;
+}
+
+/* 메인 배너 */
+.swiper-slide img {
+  border-radius: 20px;
+}
+
+/* 인기국가 */
+.popular-country {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.popular-country .item {
+  position: relative;
+  width: calc(50% - 0.5rem);
+  height: 8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popular-country .item.japan {
+  background-image: url(../images/main/country/bg-japan.png);
+}
+.popular-country .item.usa {
+  background-image: url(../images/main/country/bg-usa.png);
+}
+.popular-country .item.vietnam {
+  background-image: url(../images/main/country/bg-vietnam.png);
+}
+.popular-country .item.philiphines {
+  background-image: url(../images/main/country/bg-philiphines.png);
+}
+.popular-country .item.france {
+  background-image: url(../images/main/country/bg-france.png);
+}
+.popular-country .item.taiwan {
+  background-image: url(../images/main/country/bg-taiwan.png);
+}
+.popular-country .item .flag {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  border-radius: 50%;
+  background-size: contain;
+}
+
+.popular-country .item.japan .flag {
+  background-image: url(../images/main/country/flag-taiwan.png);
+}
+.popular-country .item.usa .flag {
+  background-image: url(../images/main/country/flag-usa.png);
+}
+.popular-country .item.vietnam .flag {
+  background-image: url(../images/main/country/flag-vietnam.png);
+}
+.popular-country .item.philiphines .flag {
+  background-image: url(../images/main/country/flag-philiphines.png);
+}
+.popular-country .item.france .flag {
+  background-image: url(../images/main/country/flag-france.png);
+}
+.popular-country .item.taiwan .flag {
+  background-image: url(../images/main/country/flag-taiwan.png);
+}
+.popular-country .item .name {
+  font-weight: 500;
+  color: #fff;
+}
+
+/* 서비스 살펴보기 */
+.service {
+  width: calc(50% - 0.5rem);
+  height: 17rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.service01 {
+  background-image: url(../images/main/service01.png);
+}
+.service02 {
+  background-image: url(../images/main/service02.png);
+}
+.referral-banner img {
+  border-radius: 20px;
+}
+
+/* 푸터 */
+footer {
+  padding: 2rem;
+  border-top: 5px solid var(--surface);
+}
+footer .logo-gray {
+  width: 100px;
+  height: 30px;
+  background: url(../images/footer/logo_gray.png) center / contain no-repeat;
+  margin: 1rem 0;
+}
+footer .sns {
+  width: 30px;
+  height: 30px;
+  background-size: contain;
+}
+footer .sns.kakao {
+  background-image: url(../images/footer/kakao.png);
+}
+footer .sns.instagram {
+  background-image: url(../images/footer/insta.png);
 }
