@@ -68,6 +68,12 @@
 .mb-6 {
   margin-bottom: 3rem;
 }
+.p-1 {
+  padding: 0.5rem;
+}
+.p-2 {
+  padding: 1rem;
+}
 input[type="submit"] {
   cursor: pointer;
 }
@@ -119,4 +125,72 @@ input[type="submit"] {
   font-size: 1.2rem;
   font-weight: bold;
   margin: 2rem 0 1rem;
+}
+.sub-header {
+  padding: 2rem;
+}
+.sub-header .back {
+  width: 35px;
+  height: 35px;
+  background: url(../images/common/arrow-left-bk.png) center left / 12px
+    no-repeat;
+}
+.sub-header .sub-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 팝업 */
+.popup-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.popup-container .popup {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 95%;
+  background-color: #fff;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 50px;
+}
+.popup-container .popup > .close {
+  width: 50px;
+  height: 50px;
+  background: url(../images/common/close.png) center / 12px no-repeat;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+/* 버튼 */
+.btn {
+  border-radius: 10px;
+  background-color: var(--primary);
+  color: #fff;
+  padding: 1rem;
+}
+.btn-full {
+  width: 100%;
+}
+
+/* 스크롤바 */
+.scrollbar::-webkit-scrollbar {
+  width: 5px;
+}
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 10px;
+}
+.scrollbar::-webkit-scrollbar-track {
+  background-color: var(--surface);
 }
