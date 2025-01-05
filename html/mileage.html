@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/nav.js"></script>
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header">
+        <button class="back"></button>
+        <div class="sub-title">적립금</div>
+      </header>
+
+      <div class="mileage-container">
+        <div class="data-info bb">
+          <div class="title">
+            <span class="font-bold text-2xl text-primary">1,100원</span>
+          </div>
+          <div>
+            <span class="text-sm font-bold">소멸 예정:</span>
+            <span class="text-sm">1,000원</span>
+          </div>
+          <div class="mt-2 text-center">
+            <div class="text-sm text-gray">
+              적립금은 홈페이지를 통한 구매 시 사용할 수 있습니다
+            </div>
+            <div class="text-sm text-gray">
+              적립금은 현금으로 환원되지 않고, 소멸된 적립금은 복구가
+              불가능합니다
+            </div>
+          </div>
+        </div>
+        <div class="p-3">
+          <h3 class="text-lg font-bold mb-2">적립 내역</h3>
+          <div class="flex col gap-2">
+            <div class="item">
+              <div class="flex col">
+                <span class="font-bold">상품 구매 적립</span>
+                <span class="text-gray text-sm">2025-01-10</span>
+              </div>
+              <div class="text-primary font-bold">+100원</div>
+            </div>
+            <div class="item">
+              <div class="flex col">
+                <span class="font-bold">상품 구매 사용</span>
+                <span class="text-gray text-sm">2025-01-10</span>
+              </div>
+              <div class="text-gray font-bold">-100원</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav-component></nav-component>
+    </div>
+  </body>
+</html>

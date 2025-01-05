@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header">
+        <button class="back"></button>
+        <div class="sub-title">QR 확인</div>
+      </header>
+
+      <div class="data-container">
+        <div class="data-info">
+          <div class="title">
+            <span class="font-bold text-2xl">일본</span>
+            <span class="font-bold text-2xl text-primary">1GB</span>
+          </div>
+          <div class="desc text-2xl">7일 플랜</div>
+          <div>
+            <span class="text-sm font-bold">활성화 유효기간:</span>
+            <span class="text-sm">2025.03.31 09:33:14 UTC</span>
+          </div>
+        </div>
+        <div class="tabs">
+          <div class="tab on" data-target="#iphone">아이폰</div>
+          <div class="tab" data-target="#android">안드로이드</div>
+        </div>
+        <div class="cont">
+          <section id="iphone" class="on">
+            <div class="tabs switch">
+              <div class="tab on" data-target="#qr">QR코드로 설치</div>
+              <div class="tab" data-target="#manual">수동 설치</div>
+            </div>
+            <div class="cont">
+              <section id="qr" class="qr on">
+                <button class="btn btn-bk flex col btn-full items-center">
+                  <span class="text-xl font-bold text-white"
+                    >원클릭 eSIM 설치하기</span
+                  >
+                  <span class="text-white">(ios버전 17.4 이상)</span>
+                </button>
+                <!-- class name 유지 -->
+                <img
+                  class="qr-code"
+                  src="../assets/images/common/qr-code.png"
+                  alt="qr code"
+                />
+                <!-- //class name 유지 -->
+                <p class="p-2 text-center">
+                  설치를 위한 QR코드(이미지 저장 및 캡쳐 가능)
+                </p>
+              </section>
+              <section id="manual" class="manual">
+                <div class="list">
+                  <div class="item">
+                    <div class="title">
+                      <span class="font-bold flex-1 text-ellipsis"
+                        >SM-DPAddressSM-DPAddressSM-DPAddressSM-DPAddressSM-DPAddressSM-DPAddressSM-DPAddress</span
+                      >
+                      <span class="text-gray flex-1 text-ellipsis"
+                        >rsp***com</span
+                      >
+                    </div>
+                    <button
+                      class="btn btn-border flex items-center justify-center gap-1 flex-shrink-0"
+                    >
+                      <span class="icon copy"></span>
+                      <span class="text-primary font-bold">복사하기</span>
+                    </button>
+                  </div>
+                  <div class="item">
+                    <div class="title">
+                      <span class="font-bold flex-1 text-ellipsis"
+                        >SM-DPAddress</span
+                      >
+                      <span class="text-gray flex-1 text-ellipsis"
+                        >rsp***com</span
+                      >
+                    </div>
+                    <button
+                      class="btn btn-border flex items-center justify-center gap-1 flex-shrink-0"
+                    >
+                      <span class="icon copy"></span>
+                      <span class="text-primary font-bold">복사하기</span>
+                    </button>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </section>
+          <section id="android"></section>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

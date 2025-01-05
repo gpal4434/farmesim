@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/nav.js" type="module"></script>
+    <script src="../js/header.js" type="module"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header-component></header-component>
+      <div class="products-list-container">
+        <div class="selected-country">
+          <div class="item">
+            <span class="name">가나</span>
+            <span class="close"></span>
+          </div>
+          <div class="item">
+            <span class="name">수단</span>
+            <span class="close"></span>
+          </div>
+          <div class="item add">
+            <span>나라 추가</span>
+          </div>
+        </div>
+        <div class="options">
+          <button class="filter on">필터 설정</button>
+          <button class="filter">필터 설정</button>
+          <button class="reset">필터 해제</button>
+        </div>
+        <div class="list">
+          <div class="item daily">
+            <div class="tp">
+              <div class="title-box">
+                <div class="title">
+                  <span>일본</span>
+                  <span class="em">1GB</span>
+                </div>
+
+                <div class="flex gap-1">
+                  <div class="label green">무제한</div>
+                </div>
+              </div>
+              <span>7일 플랜</span>
+            </div>
+            <div class="bt">
+              <div class="desc">
+                <span class="icon"></span>
+                <div class="txt">
+                  <div class="category">데일리 요금제</div>
+                  <div>매일 1GB 이후 속도 저하</div>
+                </div>
+              </div>
+              <div class="price">8,000원</div>
+            </div>
+          </div>
+          <div class="item usage">
+            <div class="tp">
+              <div class="title-box">
+                <div class="title">
+                  <span>일본</span>
+                  <span class="em">사용량 10GB</span>
+                </div>
+                <div class="flex gap-1">
+                  <div class="label green">무제한</div>
+                  <div class="label purple">BEST</div>
+                </div>
+              </div>
+              <span>10일 플랜</span>
+            </div>
+            <div class="bt">
+              <div class="desc">
+                <span class="icon"></span>
+                <div class="txt">
+                  <div class="category">사용량 요금제</div>
+                  <div>전부 소진 후 속도 저하</div>
+                </div>
+              </div>
+              <div class="price">6,000원</div>
+            </div>
+          </div>
+          <div class="item infinite">
+            <div class="tp">
+              <div class="title-box">
+                <div class="title">
+                  <span>일본</span>
+                  <span class="em">무제한</span>
+                </div>
+
+                <div class="flex gap-1">
+                  <div class="label purple">BEST</div>
+                </div>
+              </div>
+              <span>5일 플랜</span>
+            </div>
+            <div class="bt">
+              <div class="desc">
+                <span class="icon"></span>
+                <div class="txt">
+                  <div class="category">무제한 요금제</div>
+                  <div>제한 없이 무제한 사용</div>
+                </div>
+              </div>
+              <div class="price">458,000원</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 내비게이션 -->
+      <nav-component></nav-component>
+    </div>
+  </body>
+</html>
