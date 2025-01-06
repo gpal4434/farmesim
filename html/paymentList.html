@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/nav.js"></script>
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header">
+        <button class="back"></button>
+        <div class="sub-title">구매 내역</div>
+      </header>
+
+      <div class="payment-list-container">
+        <div class="select-box calendar">
+          <select name="" id="">
+            <option value="all">전체기간</option>
+            <option value="week">7일</option>
+          </select>
+        </div>
+
+        <div class="my-prod-list mt-2">
+          <div class="my-prod-item">
+            <div class="main-sec">
+              <div class="lt">
+                <div class="title flex gap-1">
+                  <div class="text-xl font-bold">일본</div>
+                  <div class="text-xl font-bold text-primary">1GB</div>
+                </div>
+                <div class="desc text-xl">7일 플랜</div>
+                <button class="review mt-1">리뷰 쓰기</button>
+                <div class="mall text-gray mt-1">네이버 스토어팜</div>
+                <div class="expiry-date">
+                  <span class="font-bold">구매일:</span>
+                  <span>2025-01-24</span>
+                </div>
+              </div>
+              <div class="rt">
+                <button class="button data">
+                  <span class="icon"></span>
+                  <span class="txt">데이터 조회</span>
+                </button>
+                <button class="button details">
+                  <span class="icon"></span>
+                  <span class="txt">주문 상세</span>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="my-prod-item">
+            <div class="main-sec">
+              <div class="lt">
+                <div class="title flex gap-1">
+                  <div class="text-xl font-bold">일본</div>
+                  <div class="text-xl font-bold text-primary">1GB</div>
+                </div>
+                <div class="desc text-xl">7일 플랜</div>
+                <button class="review mt-1 disabled">리뷰 완료</button>
+                <div class="mall text-gray mt-1">네이버 스토어팜</div>
+                <div class="expiry-date">
+                  <span class="font-bold">구매일:</span>
+                  <span>2025-01-24</span>
+                </div>
+              </div>
+              <div class="rt">
+                <button class="button data">
+                  <span class="icon"></span>
+                  <span class="txt">데이터 조회</span>
+                </button>
+                <button class="button details">
+                  <span class="icon"></span>
+                  <span class="txt">주문 상세</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <nav-component></nav-component>
+    </div>
+  </body>
+</html>

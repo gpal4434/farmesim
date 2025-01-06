@@ -3,143 +3,227 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <link rel="stylesheet" href="assets/css/media.css" />
-    <script src="js/nav.js" type="module"></script>
-    <script src="js/header.js" type="module"></script>
-    <title>ESIMFARM</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/global.css">
+    <title>이심팜 퍼블리싱</title>
+    <style>
+      #publishing-guide {
+        padding: 3rem;
+      }
+      table {
+        width: 100%;
+        min-width: 320px;
+        max-width: 768px;
+        margin: 0 auto;
+        border-top: 2px solid #333;
+      }
+      table caption {
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+      }
+      table caption span {
+        font-size: 14px;
+        text-align: right;
+      }
+      table th {
+        padding: 1rem;
+        border-bottom: 1px solid #d9d9d9;
+      }
+      table td {
+        padding: 1rem;
+        text-align: center;
+        border-bottom: 1px solid #d9d9d9;
+      }
+      table td.link {
+        
+      }
+      table td.span {
+        border-left: 1px solid #d9d9d9;
+      }
+      a {
+        text-decoration: underline;
+        color: steelblue;
+      }
+    </style>
   </head>
   <body>
-    <div id="wrap">
-      <div class="top-notice">
-        <div class="flex gap-2 items-center">
-          <span class="icon"></span>
-          <span>[공지] 필리핀 Smart 통신사 네트워크 장애</span>
-        </div>
-        <button class="close"></button>
-      </div>
-
-      <header-component></header-component>
-      <main class="main">
-        <div class="main-banner">
-          <div class="swiper">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/common/banner/banner01.jpg"
-                  alt="banner"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/common/banner/banner02.jpg"
-                  alt="banner"
-                />
-              </div>
-              <div class="swiper-slide">
-                <img
-                  src="assets/images/common/banner/banner03.jpg"
-                  alt="banner"
-                />
-              </div>
-              ...
-            </div>
-            <div class="swiper-pagination"></div>
-          </div>
-        </div>
-        <div class="search-box">
-          <button>
-            <span class="zoom"></span>
-            <span class="txt text-gray">어느나라로 출발하시나요?</span>
-            <span class="arrow"></span>
-          </button>
-        </div>
-        <div class="sections">
-          <div class="section">
-            <h3 class="section-title">인기 국가</h3>
-            <div class="popular-country">
-              <div class="item japan">
-                <span class="flag"></span>
-                <div class="name">일본</div>
-              </div>
-              <div class="item usa">
-                <span class="flag"></span>
-                <div class="name">미국</div>
-              </div>
-              <div class="item vietnam">
-                <span class="flag"></span>
-                <div class="name">베트남</div>
-              </div>
-              <div class="item philiphines">
-                <span class="flag"></span>
-                <div class="name">필리핀</div>
-              </div>
-              <div class="item france">
-                <span class="flag"></span>
-                <div class="name">프랑스</div>
-              </div>
-              <div class="item taiwan">
-                <span class="flag"></span>
-                <div class="name">대만</div>
-              </div>
-            </div>
-          </div>
-          <div class="section">
-            <h3 class="section-title">서비스 살펴보기</h3>
-            <div class="flex gap-2">
-              <a href="#" class="service service01"></a>
-              <a href="#" class="service service02"></a>
-            </div>
-          </div>
-          <div class="referral-banner">
-            <img src="assets/images/common/banner/banner03.jpg" alt="banner" />
-          </div>
-        </div>
-        <footer>
-          <div class="flex gap-2 col justify-center items-center text-center">
-            <div class="links">
-              <a href="#" class="font-bold">이용약관</a>
-              <span>·</span>
-              <a href="#" class="font-bold">개인정보 처리방침</a>
-            </div>
-            <div class="logo-gray"></div>
-            <div class="info">
-              <p>(주)이심팜</p>
-              <p>대표이사: 양재성</p>
-              <p>
-                서울 강남구 학동로 206, 2층 (논현동, 동화빌딩) 우편번호 06104
-              </p>
-              <p>사업자등록번호: 697-81-01059</p>
-              <p>통신판매업신고번호: 제2018-서울성동-1479</p>
-            </div>
-            <div class="text-gray">
-              Copyright © 2024 esimfarm. All Rights Reserved.
-            </div>
-            <div class="flex gap-2 mt-2">
-              <a href="#" class="sns kakao"></a>
-              <a href="#" class="sns instagram"></a>
-            </div>
-          </div>
-        </footer>
-      </main>
-
-      <!-- 내비게이션 -->
-      <nav-component></nav-component>
+    <div id="publishing-guide">
+      <table>
+        <caption>
+          <h1>eSimFarm:이심팜 퍼블리싱 가이드</h1>
+          <span>작성자 : 김혜미</span>
+        </caption>
+        <thead>
+          <tr>
+            <th>대분류</th>
+            <th>소분류</th>
+            <th>파일명</th>
+            <th>수정일</th>
+            <th>비고</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>메인</td>
+            <td></td>
+            <td class="link"><a href="html/main.html" target="_blank">html/main.html</a></td>
+            <td></td>
+            <td class="span" rowspan="12">1차(01/06)</td>
+          </tr>
+          <tr>
+            <td>메인</td>
+            <td>알림</td>
+            <td class="link"><a href="html/noti.html" target="_blank">html/noti.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>메인</td>
+            <td>나라 선택</td>
+            <td class="link"><a href="html/productsList.html" target="_blank">html/productsList.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>검색 리스트</td>
+            <td></td>
+            <td class="link"><a href="html/popup/selectCountry.html" target="_blank">html/popup/selectCountry.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>검색 리스트</td>
+            <td>필터</td>
+            <td class="link"><a href="html/popup/productsFilters.html" target="_blank">html/popup/productsFilters.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>메뉴</td>
+            <td></td>
+            <td class="link"><a href="html/menu.html" target="_blank">html/menu.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>내비</td>
+            <td></td>
+            <td class="link"><a href="js/nav.js">js/nav.js</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>공지사항</td>
+            <td>리스트</td>
+            <td class="link"><a href="html/noticeList.html" target="_blank">html/noticeList.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>공지사항</td>
+            <td>디테일</td>
+            <td class="link"><a href="html/noticeDetail.html" target="_blank">html/noticeDetail.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>이벤트</td>
+            <td>리스트</td>
+            <td class="link"><a href="html/eventList.html" target="_blank">html/eventList.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>이벤트</td>
+            <td>디테일</td>
+            <td class="link"><a href="html/eventDetail.html" target="_blank">html/eventDetail.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>사용방법</td>
+            <td></td>
+            <td class="link"><a href="html/howToUse.html" target="_blank">html/howToUse.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>내 eSim</td>
+            <td></td>
+            <td class="link"><a href="html/myESim.html" target="_blank">html/myESim.html</a></td>
+            <td></td>
+            <td rowspan="14" class="span">2차(01/??)</td>
+          </tr>
+          <tr>
+            <td>데이터 조회</td>
+            <td></td>
+            <td class="link"><a href="html/data.html" target="_blank">html/data.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>QR 확인</td>
+            <td></td>
+            <td class="link"><a href="html/qr.html" target="_blank">html/qr.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td></td>
+            <td class="link"><a href="html/myPage.html" target="_blank">html/myPage.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>적립금</td>
+            <td class="link"><a href="html/mileage.html" target="_blank">html/mileage.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>쿠폰</td>
+            <td class="link"><a href="html/coupon.html" target="_blank">html/coupon.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>구매 내역</td>
+            <td class="link"><a href="html/paymentList.html" target="_blank">html/paymentList.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>리뷰 쓰기</td>
+            <td class="link"><a href="html/review-write.html" target="_blank">html/review-write.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>주문 상세</td>
+            <td class="link"><a href="html/oderDetails.html" target="_blank">html/oderDetails.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>친구 추천</td>
+            <td class="link"><a href="html/referral.html" target="_blank">html/referral.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>마이페이지</td>
+            <td>내 정보 수정</td>
+            <td class="link"><a href="html/myInfoEdit.html" target="_blank">html/myInfoEdit.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>모달</td>
+            <td>버튼</td>
+            <td class="link"><a href="html/modal/button.html" target="_blank">html/modal/button.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>모달</td>
+            <td>일반</td>
+            <td class="link"><a href="html/modal/info.html" target="_blank">html/modal/info.html</a></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>모달</td>
+            <td>쿠폰 적용</td>
+            <td class="link"><a href="html/modal/coupon.html" target="_blank">html/modal/coupon.html</a></td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </body>
-  <script>
-    const swiper = new Swiper(".swiper", {
-      loop: true,
-
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
-  </script>
 </html>

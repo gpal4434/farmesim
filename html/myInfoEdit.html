@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/nav.js"></script>
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header">
+        <button class="back"></button>
+        <div class="sub-title">내 정보 수정</div>
+      </header>
+
+      <div class="my-info-edit-container">
+        <form action="" class="my-info">
+          <input type="text" class="input" value="백지훈" disabled />
+          <input type="text" class="input" value="백지훈" />
+          <input type="phone" class="input" value="01012345678" disabled />
+
+          <div class="input-with-button">
+            <input type="tel" value="01012345678" />
+            <button class="btn btn-sm">인증하기</button>
+          </div>
+          <input type="email" class="input" value="id@email.com" disabled />
+          <div class="flex gap-1">
+            <span class="font-bold">가입경로:</span>
+            <span>네이버 간편 로그인</span>
+          </div>
+          <div class="my-3 flex col justify-center text-center">
+            <span class="text-sm"
+              >eSIM 주문 시 QR 정보가 <span class="font-bold">이메일</span>과
+              <span class="font-bold">핸드폰 번호</span>로 전송됩니다.</span
+            >
+            <span class="font-bold text-primary text-sm"
+              >받으실 연락처를 정확히 입력해 주세요.</span
+            >
+          </div>
+          <button class="btn btn-lg btn-full">수정하기</button>
+          <input
+            type="submit"
+            class="btn btn-bk btn-lg btn-full"
+            value="저장하기"
+          />
+        </form>
+        <div class="mt-auto">
+          <p class="text-sm pb-6 text-center">
+            이심팜을 탈퇴하시려면
+            <a href="#" class="underline text-gray">여기</a>를 눌러주세요.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

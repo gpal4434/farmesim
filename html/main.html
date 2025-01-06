@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="../assets/css/media.css" />
+    <script src="../js/nav.js" type="module"></script>
+    <script src="../js/header.js" type="module"></script>
+    <title>ESIMFARM</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <div class="top-notice">
+        <div class="flex gap-2 items-center">
+          <span class="icon"></span>
+          <span>[공지] 필리핀 Smart 통신사 네트워크 장애</span>
+        </div>
+        <button class="close"></button>
+      </div>
+
+      <header-component></header-component>
+      <main class="main">
+        <div class="main-banner">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img
+                  src="../assets/images/common/banner/banner01.jpg"
+                  alt="banner"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../assets/images/common/banner/banner02.jpg"
+                  alt="banner"
+                />
+              </div>
+              <div class="swiper-slide">
+                <img
+                  src="../assets/images/common/banner/banner03.jpg"
+                  alt="banner"
+                />
+              </div>
+              ...
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+        <div class="search-box">
+          <button>
+            <span class="zoom"></span>
+            <span class="txt text-gray">어느나라로 출발하시나요?</span>
+            <span class="arrow"></span>
+          </button>
+        </div>
+        <div class="sections">
+          <div class="section">
+            <h3 class="section-title">인기 국가</h3>
+            <div class="popular-country">
+              <div class="item japan">
+                <span class="flag"></span>
+                <div class="name">일본</div>
+              </div>
+              <div class="item usa">
+                <span class="flag"></span>
+                <div class="name">미국</div>
+              </div>
+              <div class="item vietnam">
+                <span class="flag"></span>
+                <div class="name">베트남</div>
+              </div>
+              <div class="item philiphines">
+                <span class="flag"></span>
+                <div class="name">필리핀</div>
+              </div>
+              <div class="item france">
+                <span class="flag"></span>
+                <div class="name">프랑스</div>
+              </div>
+              <div class="item taiwan">
+                <span class="flag"></span>
+                <div class="name">대만</div>
+              </div>
+            </div>
+          </div>
+          <div class="section">
+            <h3 class="section-title">서비스 살펴보기</h3>
+            <div class="flex gap-2">
+              <a href="#" class="service service01"></a>
+              <a href="#" class="service service02"></a>
+            </div>
+          </div>
+          <div class="referral-banner">
+            <img
+              src="../assets/images/common/banner/banner03.jpg"
+              alt="banner"
+            />
+          </div>
+        </div>
+        <footer>
+          <div class="flex gap-2 col justify-center items-center text-center">
+            <div class="links">
+              <a href="#" class="font-bold">이용약관</a>
+              <span>·</span>
+              <a href="#" class="font-bold">개인정보 처리방침</a>
+            </div>
+            <div class="logo-gray"></div>
+            <div class="info">
+              <p>(주)이심팜</p>
+              <p>대표이사: 양재성</p>
+              <p>
+                서울 강남구 학동로 206, 2층 (논현동, 동화빌딩) 우편번호 06104
+              </p>
+              <p>사업자등록번호: 697-81-01059</p>
+              <p>통신판매업신고번호: 제2018-서울성동-1479</p>
+            </div>
+            <div class="text-gray">
+              Copyright © 2024 esimfarm. All Rights Reserved.
+            </div>
+            <div class="flex gap-2 mt-2">
+              <a href="#" class="sns kakao"></a>
+              <a href="#" class="sns instagram"></a>
+            </div>
+          </div>
+        </footer>
+      </main>
+
+      <!-- 내비게이션 -->
+      <nav-component></nav-component>
+    </div>
+  </body>
+  <script>
+    const swiper = new Swiper(".swiper", {
+      loop: true,
+
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+</html>

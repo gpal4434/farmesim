@@ -9,13 +9,18 @@
   --text-gray: #999;
   --surface: #f5f5f5;
   --gray: #ccc;
+  --disabled: #ebf0f3;
+  --blue-gray: #ebf0f3;
+  --text-disabled: #afbac0;
+  --red: #d21111;
 }
 
 #wrap {
+  min-width: 320px;
+  width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  width: 100%;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 .top-notice {
@@ -225,6 +230,9 @@ footer .sns.instagram {
 }
 
 /* 알림 */
+.noti-container {
+  min-height: calc(100vh - 114.5px);
+}
 .noti-container .item {
   padding: 1rem 2rem;
   display: flex;
@@ -292,6 +300,7 @@ footer .sns.instagram {
 }
 .popup .select-country .country-box {
   margin-top: 1rem;
+  width: 100%;
 }
 .popup .select-country .country-tabs-container {
   overflow-x: auto;
@@ -388,7 +397,6 @@ footer .sns.instagram {
 /* 상품 리스트 */
 .products-list-container {
   background-color: var(--surface);
-  height: calc(100% - 55px);
 }
 .products-list-container .selected-country {
   display: flex;
@@ -589,7 +597,7 @@ footer .sns.instagram {
 .filter-container .row button {
   border: 1px solid var(--border);
   padding: 1rem 2rem;
-  min-width: 7rem;
+  min-width: 6rem;
   border-radius: 10px;
 }
 .filter-container .m-carriers {
@@ -609,6 +617,7 @@ footer .sns.instagram {
 .menu-container {
   display: flex;
   flex-direction: column;
+  min-height: calc(100vh - 74px);
 }
 .menu-container header {
   display: flex;
@@ -693,6 +702,11 @@ footer .sns.instagram {
 }
 
 /* 공지사항 리스트 */
+.notice-container {
+  min-height: calc(100vh - 118px);
+  display: flex;
+  flex-direction: column;
+}
 .notice-container .list {
   display: flex;
   flex-direction: column;
@@ -741,6 +755,9 @@ footer .sns.instagram {
 }
 
 /* 이벤트 및 혜택 */
+.event-container {
+  min-height: calc(100vh - 118px);
+}
 .event-container .detail {
   padding: 0 1.5rem;
 }
@@ -920,6 +937,11 @@ footer .sns.instagram {
 }
 
 /* 적립금 */
+.mileage-container {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh - 193px);
+}
 .mileage-container .item {
   display: flex;
   justify-content: space-between;
@@ -928,4 +950,109 @@ footer .sns.instagram {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 1rem 1.5rem;
+}
+.mileage-container .notice {
+  margin-top: auto;
+  padding: 1.5rem;
+}
+
+/* 주문 상세 */
+.icon.mall {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background: url(../images/common/shopping.png) center / contain no-repeat;
+}
+
+/* 구매 내역 */
+.payment-list-container {
+  min-height: calc(100vh - 114.5px);
+  padding: 1.5rem;
+  background-color: var(--blue-gray);
+}
+
+/* 리뷰 쓰기 */
+.review-container {
+  min-height: calc(100vh - 114.5px);
+  display: flex;
+  flex-direction: column;
+}
+.review-container .review-box {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.review-container .review-box .star {
+  font-size: 42px;
+  color: #cfdbdd;
+  cursor: pointer;
+}
+.review-container .review-box .star.on {
+  color: var(--primary);
+}
+.review-container .review-write {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+.review-container .tip {
+  background-color: var(--blue-gray);
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+/* 친구 초대 */
+.referral-container .code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--blue-gray);
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0.5rem 5rem;
+  margin: 0.5rem auto 1rem;
+}
+.referral-container .button {
+  border: 1.5px solid var(--primary);
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  border-radius: 10px;
+  align-items: center;
+}
+.referral-container .button .icon {
+  width: 30px;
+  height: 30px;
+}
+.referral-container .copy-link .icon {
+  background: url(../images/common/icon-link.png) center / contain no-repeat;
+}
+
+.referral-container .copy-code .icon {
+  background: url(../images/common/icon-code.png) center / contain no-repeat;
+}
+.referral-container .banner img {
+  border-radius: 10px;
+}
+
+/* 내 정보 수정 */
+.my-info-edit-container {
+  padding: 0 1.5rem 1.5rem;
+  min-height: calc(100vh - 114.5px);
+  display: flex;
+  flex-direction: column;
+}
+.my-info-edit-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 알림 설정 */
+.alarm-container {
+  padding: 0 1.5rem 1.5rem;
 }
