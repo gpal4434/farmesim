@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/nav.js"></script>
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header">
+        <button class="back"></button>
+        <div class="sub-title">자주 묻는 질문</div>
+      </header>
+      <div class="faq-container">
+        <div class="item">
+          <div class="question">
+            <span class="icon"></span>
+            <span class="subject flex-1"
+              >eSIM을 삭제했습니다. 어떻게 해야 되나요?</span
+            >
+            <span class="arrow"></span>
+          </div>
+          <div class="answer">
+            <span class="icon"></span>
+            <div class="contents flex-1">
+              <p class="font-bold">
+                상품에 따라 출국 전 설치 여부가 다를 수 있습니다.
+              </p>
+              <p>현지에 도착 후 네트워크를 활성화 해주세요.</p>
+              <div class="desc-title">eSIM 정상 설치 확인 방법</div>
+              <div class="desc-p">
+                <p class="font-bold">QR 수령시 받은 ICCID 값 일치여부 체크</p>
+                <p class="font-bold">
+                  아이폰: 설정 > 일반 > 정보 > 하단 eSIM ICCID 정보 확인
+                </p>
+                <p class="font-bold">
+                  갤럭시: 설정 > 연결 > SIM관리자 > eSIM1 > ICCID 정보 확인
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <div class="question">
+            <span class="icon"></span>
+            <span class="subject flex-1"
+              >eSIM을 삭제했습니다. 어떻게 해야 되나요?eSIM을 삭제했습니다.
+              어떻게 해야 되나요?</span
+            >
+            <span class="arrow"></span>
+          </div>
+          <div class="answer">
+            <span class="icon"></span>
+            <div class="contents flex-1">
+              <p class="font-bold">
+                상품에 따라 출국 전 설치 여부가 다를 수 있습니다.
+              </p>
+              <p>현지에 도착 후 네트워크를 활성화 해주세요.</p>
+              <div class="desc-title">eSIM 정상 설치 확인 방법</div>
+              <div class="desc-p">
+                <p class="font-bold">QR 수령시 받은 ICCID 값 일치여부 체크</p>
+                <p class="font-bold">
+                  아이폰: 설정 > 일반 > 정보 > 하단 eSIM ICCID 정보 확인
+                </p>
+                <p class="font-bold">
+                  갤럭시: 설정 > 연결 > SIM관리자 > eSIM1 > ICCID 정보 확인
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        //faq 아코디언
+        const items = document.querySelectorAll(".item");
+        items.forEach((q) =>
+          q.addEventListener("click", function () {
+            const isOpen = q.classList.contains("on");
+            console.log(isOpen);
+
+            q.classList.remove("on");
+
+            if (!isOpen) q.classList.add("on");
+          })
+        );
+      });
+    </script>
+  </body>
+</html>

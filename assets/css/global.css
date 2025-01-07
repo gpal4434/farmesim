@@ -1,9 +1,15 @@
 @charset "utf-8";
+.block {
+  display: block;
+}
 .flex {
   display: flex;
 }
 .flex-1 {
   flex: 1 1 0%;
+}
+.flex-wrap {
+  flex-wrap: wrap;
 }
 .flex-shrink-0 {
   flex-shrink: 0;
@@ -37,6 +43,10 @@
 }
 .font-bold {
   font-weight: bold;
+}
+.font-extra-bold {
+  font-family: "ONE Mobile Title";
+  font-weight: 300;
 }
 .mt-auto {
   margin-top: auto;
@@ -114,7 +124,7 @@
   padding: 1.5rem;
 }
 .p-4 {
-  padding: 2cqw;
+  padding: 2rem;
 }
 .pt-1 {
   padding-top: 0.5rem;
@@ -258,6 +268,8 @@ input[type="submit"] {
 .sub-header .sub-title {
   font-size: 24px;
   font-weight: bold;
+  font-family: "ONE Mobile Title";
+  font-weight: 300;
 }
 
 /* 팝업 */
@@ -270,6 +282,7 @@ input[type="submit"] {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 8888;
 }
 .popup-container .popup {
   position: absolute;
@@ -329,6 +342,9 @@ input[type="submit"] {
   color: #fff;
   padding: 0.5rem 1rem;
 }
+.btn:disabled {
+  color: #59d7b8;
+}
 .btn-full {
   width: 100%;
 }
@@ -344,10 +360,16 @@ input[type="submit"] {
   background-color: var(--text);
   color: #fff;
 }
+.btn-bk:disabled {
+  color: #5b5b5b;
+}
 .btn-gray {
   background-color: var(--gray);
   border: 0;
   color: var(--text);
+}
+.btn-gray:disabled {
+  color: #e3e3e3;
 }
 .btn-disabled {
   background-color: var(--disabled);
@@ -357,6 +379,11 @@ input[type="submit"] {
   border: 1.5px solid var(--primary);
   background-color: #fff;
   color: var(--primary);
+}
+.btn-border-bk {
+  border: 1.5px solid var(--text);
+  background-color: #fff;
+  color: var(--text);
 }
 
 /* 스크롤바 */
@@ -489,7 +516,6 @@ html::-webkit-scrollbar-track,
   border-bottom: 2px solid var(--border);
   text-align: center;
   color: var(--text-gray);
-  font-size: 1.2rem;
   cursor: pointer;
 }
 .tabs .tab.on {
@@ -694,9 +720,17 @@ html::-webkit-scrollbar-track,
 /* 인풋 */
 .input {
   border: 1px solid var(--border);
-  padding: 1rem;
+  padding: 1.2rem;
   border-radius: 10px;
   width: 100%;
+}
+.input input {
+  width: 100%;
+}
+.input:disabled,
+.input.disabled,
+.input input:disabled {
+  background-color: var(--disabled);
 }
 .input-with-button {
   border: 1px solid var(--border);
@@ -720,11 +754,20 @@ html::-webkit-scrollbar-track,
   background-color: var(--blue-gray);
   color: var(--text-gray);
 }
+.input-with-button.disabled {
+  background-color: var(--blue-gray);
+}
 
 /* 스위치 토글 */
-.toggle .label {
-  display: inline-flex;
+.toggle {
+  width: 100%;
+}
+
+.toggle label {
+  width: 100%;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
   cursor: pointer;
 }
@@ -732,36 +775,37 @@ html::-webkit-scrollbar-track,
 .toggle input {
   appearance: none;
   position: relative;
-  border: max(2px, 0.1em) solid gray;
   border-radius: 1.25em;
-  width: 2.25em;
-  height: 1.25em;
+  width: 3.5rem;
+  height: 2rem;
+  background-color: var(--blue-gray);
+  transition: all 0.3s;
 }
 
 .toggle input::before {
   content: "";
   position: absolute;
   left: 0;
-  width: 1em;
-  height: 1em;
+  right: auto;
+  top: 2px;
+  width: 1.7rem;
+  height: 1.7rem;
   border-radius: 50%;
   transform: scale(0.8);
-  background-color: gray;
+  background-color: white;
   transition: left 250ms linear;
 }
 
 .toggle input:checked {
-  background-color: tomato;
-  border-color: tomato;
+  background-color: var(--primary);
 }
 
 .toggle input:checked::before {
-  background-color: white;
-  left: 1em;
+  left: auto;
+  right: 2px;
 }
 
 .toggle input:disabled {
-  border-color: lightgray;
   opacity: 0.7;
   cursor: not-allowed;
 }
@@ -775,19 +819,100 @@ html::-webkit-scrollbar-track,
   cursor: not-allowed;
 }
 
+.toggle input:enabled:hover,
 .toggle input:focus-visible {
-  outline-offset: max(2px, 0.1em);
-  outline: max(2px, 0.1em) solid tomato;
+  box-shadow: 0 0 0 max(4px, 0.2em) rgba(0, 0, 0, 0.1);
 }
 
-.toggle input:enabled:hover {
-  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
-}
-
-/* Global CSS */
-fieldset.toggle {
-  border: none;
+/* 동글 체크 박스 */
+.chk-circle {
+  position: relative;
   display: flex;
-  flex-direction: column;
   gap: 0.5rem;
+  align-items: center;
+}
+.chk-circle input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+}
+.chk-circle label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+.chk-circle label:before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background: url(../images/common/chk-circle-off.png) center / contain
+    no-repeat;
+}
+.chk-circle input:checked + label {
+  color: var(--primary);
+}
+.chk-circle input:checked + label:before {
+  background-image: url(../images/common/chk-circle-on.png);
+}
+
+/* 기본 체크 박스 */
+.chk {
+  position: relative;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+.chk input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  height: 0;
+}
+.chk label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.chk label:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(../images/common/chk-off.png) center / contain no-repeat;
+}
+.chk input:checked + label {
+  font-weight: bold;
+}
+.chk input:checked + label:before {
+  background-image: url(../images/common/chk-on.png);
+}
+
+/* 스피너 */
+.loader-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+.loader-container .spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100px;
+  height: 130px;
+  background: url(../images/common/loading.gif) center / contain no-repeat;
+  translate: -50% -50%;
 }

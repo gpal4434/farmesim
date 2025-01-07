@@ -1,4 +1,62 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile.css");
+@import url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile-title/ONEMobileTitle.css");
+@font-face {
+  font-family: "ONE Mobile";
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Light.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Light.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Light.otf")
+      format("opentype"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Light.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "ONE Mobile";
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Regular.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Regular.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Regular.otf")
+      format("opentype"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Regular.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "ONE Mobile";
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Bold.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Bold.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Bold.otf")
+      format("opentype"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile/ONEMobile-Bold.ttf")
+      format("truetype");
+}
+@font-face {
+  font-family: "ONE Mobile Title";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile-title/ONEMobileTitle.woff2")
+      format("woff2"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile-title/ONEMobileTitle.woff")
+      format("woff"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile-title/ONEMobileTitle.otf")
+      format("opentype"),
+    url("https://cdn.jsdelivr.net/npm/fonts-archive-one-mobile-title/ONEMobileTitle.ttf")
+      format("truetype");
+}
 html,
 body,
 div,
@@ -89,7 +147,7 @@ select {
   border: 0;
   color: #333;
   box-sizing: border-box;
-  font-family: "Noto Sans KR", sans-serif;
+  font-family: "ONE Mobile", "Noto Sans KR", sans-serif;
   font-weight: 400;
   outline: none;
   line-height: 1.5;
@@ -200,4 +258,7 @@ a {
 } /*# sourceMappingURL=reset.css.map */
 img {
   max-width: 100%;
+}
+input {
+  background-color: transparent;
 }
