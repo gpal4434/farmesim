@@ -48,8 +48,14 @@
   font-family: "ONE Mobile Title";
   font-weight: 300;
 }
+.bg-gray {
+  background-color: var(--blue-gray);
+}
 .mt-auto {
   margin-top: auto;
+}
+.ml-auto {
+  margin-left: auto;
 }
 .mt-1 {
   margin-top: 0.5rem;
@@ -90,29 +96,73 @@
 .mb-6 {
   margin-bottom: 3rem;
 }
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
 .mx-1 {
-  margin: 0 0.5rem 0;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
 }
 .mx-2 {
-  margin: 0 1rem 0;
+  margin-left: 1rem;
+  margin-right: 1rem;
 }
 .mx-3 {
-  margin: 0 1.5rem 0;
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 .mx-4 {
-  margin: 0 2rem 0;
+  margin-left: 2rem;
+  margin-right: 2rem;
 }
 .my-1 {
-  margin: 0.5rem 0 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .my-2 {
-  margin: 1rem 0 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 .my-3 {
-  margin: 1.5rem 0 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
 }
 .my-4 {
-  margin: 2rem 0 2rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.py-1 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.py-3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.py-4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+.px-1 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.px-2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-3 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+.px-4 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 .p-1 {
   padding: 0.5rem;
@@ -214,7 +264,7 @@ input[type="submit"] {
   color: #fff;
 }
 .text-sm {
-  font-size: 12px;
+  font-size: 0.8rem;
 }
 .text-lg {
   font-size: 1.2rem;
@@ -236,6 +286,17 @@ input[type="submit"] {
 }
 .text-right {
   text-align: right;
+}
+.hr {
+  width: 100%;
+  height: 1px;
+  background-color: var(--border);
+}
+.relative {
+  position: relative;
+}
+.absolute {
+  position: absolute;
 }
 .main {
   padding: 1rem;
@@ -270,6 +331,14 @@ input[type="submit"] {
   font-weight: bold;
   font-family: "ONE Mobile Title";
   font-weight: 300;
+}
+.sub-header .close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 35px;
+  height: 35px;
+  background: url(../images/common/close.png) center / 12px no-repeat;
 }
 
 /* 팝업 */
@@ -330,6 +399,9 @@ input[type="submit"] {
   text-align: center;
   max-height: 400px;
   overflow-y: auto;
+}
+.popup-container .modal .cont.text-left {
+  text-align: left;
 }
 .popup-container .modal .button-container {
   padding: 0 1.5rem 2rem;
@@ -720,9 +792,15 @@ html::-webkit-scrollbar-track,
 /* 인풋 */
 .input {
   border: 1px solid var(--border);
-  padding: 1.2rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 10px;
   width: 100%;
+}
+.input.input-gray,
+.input-with-button.input-gray,
+.input-with-button.input-gray input {
+  background-color: var(--blue-gray);
+  border: 0;
 }
 .input input {
   width: 100%;
@@ -734,7 +812,7 @@ html::-webkit-scrollbar-track,
 }
 .input-with-button {
   border: 1px solid var(--border);
-  padding: 0.5rem 1rem;
+  padding: 0.8rem 1.2rem;
   border-radius: 10px;
   width: 100%;
   display: flex;
@@ -757,7 +835,11 @@ html::-webkit-scrollbar-track,
 .input-with-button.disabled {
   background-color: var(--blue-gray);
 }
-
+button.zoom {
+  width: 20px;
+  height: 20px;
+  background: url(../images/common/zoom-primary.png) center / 14px no-repeat;
+}
 /* 스위치 토글 */
 .toggle {
   width: 100%;
@@ -915,4 +997,37 @@ html::-webkit-scrollbar-track,
   height: 130px;
   background: url(../images/common/loading.gif) center / contain no-repeat;
   translate: -50% -50%;
+}
+
+/* 검색 결과 */
+.search-list {
+  display: none;
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  right: 0;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.search-list.show {
+  display: block;
+}
+.search-list .inner {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  max-height: 10rem;
+  overflow-y: auto;
+}
+.search-item {
+  /* font-size: 0.8rem; */
+}
+.search-item:focus,
+.search-item:hover,
+.search-item.on {
+  color: var(--primary);
+  font-weight: bold;
+  cursor: pointer;
 }

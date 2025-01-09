@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/nav.js"></script>
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header search">
+        <button class="back"></button>
+        <div class="sub-title">리뷰 확인</div>
+        <div id="searchBox" class="mt-2 input-with-button input-gray relative">
+          <input type="text" placeholder="궁금한 나라의 리뷰를 찾아보세요." />
+          <button class="zoom"></button>
+          <div id="searchList" class="search-list">
+            <div class="inner scrollbar">
+              <div class="search-item">일본</div>
+              <div class="search-item">대만</div>
+              <div class="search-item">중국</div>
+              <div class="search-item on">태국</div>
+              <div class="search-item">베트남</div>
+              <div class="search-item">필리핀</div>
+              <div class="search-item">미국</div>
+              <div class="search-item">호주</div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <div class="reviews-container">
+        <div class="item">
+          <h3 class="font-bold">일본</h3>
+          <p class="cont">리뷰 내용입니다.</p>
+          <div class="flex justify-between items-center">
+            <div class="stars">
+              <span class="star on">★</span>
+              <span class="star on">★</span>
+              <span class="star on">★</span>
+              <span class="star on">★</span>
+              <span class="star">★</span>
+            </div>
+            <span class="text-sm">백**님</span>
+          </div>
+        </div>
+        <div class="item">
+          <h3 class="font-bold">일본</h3>
+          <p class="cont">
+            리뷰 내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰
+            내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰
+            내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰
+            내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰
+            내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰 내용입니다.리뷰
+            내용입니다.
+          </p>
+          <div class="flex justify-between items-center">
+            <div class="stars">
+              <span class="star on">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+              <span class="star">★</span>
+            </div>
+            <span class="text-sm">백**님</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // 검색창 애니메이션 예시
+      document.addEventListener("DOMContentLoaded", function () {
+        const searchBox = document.querySelector("#searchBox");
+        const searchList = document.querySelector("#searchList");
+
+        if (searchBox && searchList) {
+          searchBox.addEventListener("click", function (e) {
+            e.stopPropagation();
+            searchList.classList.toggle("show");
+          });
+          window.addEventListener("click", function (e) {
+            if (!searchBox.contains(e.taget)) {
+              searchList.classList.remove("show");
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -13,7 +13,10 @@
   --blue-gray: #ebf0f3;
   --text-disabled: #afbac0;
   --red: #d21111;
+  --header-height: 55px;
   --sub-header-height: 120px;
+  --sub-header-height-no-back: 78px;
+  --btn-lg-height: 53.19px;
 }
 
 #wrap {
@@ -517,16 +520,16 @@ footer .sns.instagram {
 .products-list-container .item .title span {
   font-weight: bold;
 }
-.products-list-container .item.daily .em,
-.products-list-container .item.daily .desc .category {
+.item.daily .em,
+.item.daily .desc .category {
   color: #507ecc;
 }
-.products-list-container .item.usage .em,
-.products-list-container .item.usage .desc .category {
+.item.usage .em,
+.item.usage .desc .category {
   color: #b74ac7;
 }
-.products-list-container .item.infinite .em,
-.products-list-container .item.infinite .desc .category {
+.item.infinite .em,
+.item.infinite .desc .category {
   color: var(--primary);
 }
 .products-list-container .item .bt {
@@ -539,21 +542,25 @@ footer .sns.instagram {
   gap: 5px;
   align-items: center;
 }
-.products-list-container .item .desc .icon {
-  display: block;
-  width: 35px;
-  height: 35px;
-}
 .products-list-container .item .desc .category {
   font-weight: bold;
 }
-.products-list-container .item.daily .desc .icon {
+.item.daily .icon {
+  display: block;
+  width: 35px;
+  height: 35px;
   background: url(../images/common/icon-daily.png) center / contain no-repeat;
 }
-.products-list-container .item.usage .desc .icon {
+.item.usage .icon {
+  display: block;
+  width: 35px;
+  height: 35px;
   background: url(../images/common/icon-use.png) center / contain no-repeat;
 }
-.products-list-container .item.infinite .desc .icon {
+.item.infinite .icon {
+  display: block;
+  width: 35px;
+  height: 35px;
   background: url(../images/common/icon-infinity.png) center / contain no-repeat;
 }
 .products-list-container .item .price {
@@ -986,12 +993,9 @@ footer .sns.instagram {
 }
 .review-container .review-box .star {
   font-size: 42px;
-  color: #cfdbdd;
   cursor: pointer;
 }
-.review-container .review-box .star.on {
-  color: var(--primary);
-}
+
 .review-container .review-write {
   border: 1px solid var(--border);
   border-radius: 10px;
@@ -1314,4 +1318,209 @@ footer .sns.instagram {
   display: flex;
   flex-direction: column;
   gap: 3rem;
+}
+
+/* 결제하기 */
+.parchase-container {
+  min-height: calc(100vh - var(--sub-header-height-no-back));
+  padding: 0 1.5rem 1.5rem;
+}
+.gray-box {
+  background-color: var(--blue-gray);
+  border-radius: 1rem;
+  padding: 1.5rem;
+}
+.pay-method {
+  border-radius: 5px;
+  background-color: var(--blue-gray);
+  padding: 1rem 0.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.pay-method .icon {
+  width: 100%;
+  height: 1.5rem;
+  display: block;
+}
+.pay-method.kakao .icon {
+  background: url(../images/common/kakaopay.png) center / contain no-repeat;
+}
+.pay-method.naver .icon {
+  background: url(../images/common/naverpay.png) center / contain no-repeat;
+}
+.pay-method.toss .icon {
+  background: url(../images/common/tosspay.png) center / contain no-repeat;
+}
+.pay-method.card .icon {
+  background: url(../images/common/credit-card.png) center / contain no-repeat;
+}
+.pay-method .name {
+  font-size: 0.8rem;
+}
+.prod-info {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+.prod-info span {
+  font-size: 0.8rem;
+}
+.prod-info .icon {
+  width: 16px;
+  height: 16px;
+}
+.prod-info .font-bold {
+  width: 80px;
+}
+.prod-info.carrier .icon {
+  background: url(../images/common/icon-world.png) center / contain no-repeat;
+}
+.prod-info.networt .icon {
+  background: url(../images/common/icon-network.png) center / contain no-repeat;
+}
+.prod-info.antenna .icon {
+  background: url(../images/common/icon-antenna.png) center / contain no-repeat;
+}
+.prod-info.call .icon {
+  background: url(../images/common/icon-call.png) center / contain no-repeat;
+}
+.prod-info.zoom .icon {
+  background: url(../images/common/icon-zoom.png) center / contain no-repeat;
+}
+.prod-info.calendar .icon {
+  background: url(../images/common/icon-calendar.png) center / contain no-repeat;
+}
+.prod-info.location .icon {
+  background: url(../images/common/icon-location.png) center / contain no-repeat;
+}
+
+/* 상품 상세 */
+.product-detail-container {
+  height: calc(100vh - var(--header-height) - 2rem - var(--btn-lg-height));
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+.product-detail-container .banner {
+  width: 100%;
+  height: 8rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-detail-container .banner.japan {
+  background-image: url(../images/main/country/bg-japan.png);
+}
+
+.product-detail-container .banner.usa {
+  background-image: url(../images/main/country/bg-usa.png);
+}
+.product-detail-container .banner.vietnam {
+  background-image: url(../images/main/country/bg-vietnam.png);
+}
+.product-detail-container .banner.france {
+  background-image: url(../images/main/country/bg-france.png);
+}
+.product-detail-container .banner.philiphines {
+  background-image: url(../images/main/country/bg-philiphines.png);
+}
+.product-detail-container .banner.taiwan {
+  background-image: url(../images/main/country/bg-taiwan.png);
+}
+.product-detail-container .banner span {
+  color: #fff;
+  text-align: center;
+}
+.product-detail-container .reviews {
+  /* font-size: 0.8rem; */
+}
+.star {
+  color: var(--blue-gray);
+}
+.star.on {
+  color: var(--primary);
+}
+
+/* 리뷰확인 */
+.reviews-container {
+  min-height: calc(100vh - 168px);
+  background-color: var(--blue-gray);
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.reviews-container .item {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.05);
+}
+
+/* 지원 단말기 확인 */
+.check-device-container {
+  min-height: calc(100vh - var(--sub-header-height));
+}
+.check-device-container .section {
+  padding: 1.5rem;
+}
+.check-device-container .section > .title img {
+  display: block;
+  margin: 2rem auto;
+  width: 60%;
+  max-width: 250px;
+}
+.check-device-container .step > .title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.5rem;
+  background-color: #000;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+.check-device-container .step + .step {
+  margin-top: 4rem;
+}
+.check-device-container .cont > img {
+  margin: 1rem 0;
+}
+.check-device-container .cont .desc {
+  border: 1px solid;
+  border-radius: 10px;
+  padding: 1rem;
+  background-color: #fff;
+  text-align: center;
+}
+.check-device-container .cont .desc .em {
+  border-radius: 50px;
+  background-color: var(--primary);
+  font-weight: bold;
+  padding: 5px;
+}
+.check-device-container .section02 .box {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+  border: 1px solid var(--primary);
+  border-radius: 1rem;
+}
+
+/* 스플래시 이미지 */
+.splash-container {
+  width: 100vw;
+  height: 100vh;
+}
+.splash-container img {
+  width: 100%;
+  height: 100%;
 }

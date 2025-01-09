@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script src="../js/common.js"></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="wrap">
+      <header class="sub-header">
+        <div class="sub-title">구매하기</div>
+        <button class="close"></button>
+      </header>
+      <div class="parchase-container">
+        <h3 class="font-bold text-lg">상품 정보</h3>
+        <div class="my-2">
+          <div class="flex gap-1">
+            <span class="text-lg font-bold">일본</span>
+            <span class="text-lg font-bold text-primary">1GB</span>
+          </div>
+          <span class="text-lg">7일 플랜</span>
+        </div>
+        <div>
+          <!-- 마지막 클래스 daily, usage, infinite만 바꾸면 됨 -->
+          <div class="flex gap-1 items-center item daily">
+            <span class="icon"></span>
+            <div class="desc">
+              <div class="category font-bold">사용량 요금제</div>
+              <div class="text-sm">
+                <span class="font-bold">일정 기간 동안 정해진 데이터 용량</span
+                >을 유연하게 사용
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="my-2">
+          <ul class="flex col gap-1">
+            <li class="prod-info carrier">
+              <span class="icon"></span>
+              <span class="font-bold">통신사</span>
+              <span>KDDI(AU)</span>
+            </li>
+            <li class="prod-info networt">
+              <span class="icon"></span>
+              <span class="font-bold">네트워크</span>
+              <span>4G/LTE</span>
+            </li>
+            <li class="prod-info antenna">
+              <span class="icon"></span>
+              <span class="font-bold">핫스팟/테더링</span>
+              <span>가능</span>
+            </li>
+            <li class="prod-info call">
+              <span class="icon"></span>
+              <span class="font-bold">통화/문자</span>
+              <span>불가</span>
+            </li>
+            <li class="prod-info zoom">
+              <span class="icon"></span>
+              <span class="font-bold">사용량 조회</span>
+              <span>가능</span>
+            </li>
+            <li class="prod-info calendar">
+              <span class="icon"></span>
+              <span class="font-bold">유효기간</span>
+              <span>60일</span>
+            </li>
+            <li class="prod-info location">
+              <span class="icon"></span>
+              <span class="font-bold">등록 장소</span>
+              <span>한국/현지</span>
+            </li>
+          </ul>
+        </div>
+        <div class="gray-box mb-2 flex col gap-1">
+          <div class="text-sm">
+            <span class="font-bold">소진 후 속도:</span> 최대 256kbps
+          </div>
+          <div class="text-sm">
+            <span class="font-bold">사용일 수 리셋:</span> 개통 시점부터 24시간
+            기준
+          </div>
+          <div class="text-sm">
+            <span class="font-bold">사용 가능 국가:</span> 일본
+          </div>
+          <div class="text-sm">
+            <span class="font-bold">사용 가능 기종:</span>
+            <button class="btn btn-bk btn-sm">보러가기</button>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="flex col gap-2 py-2">
+          <h2 class="font-bold text-xl">쿠폰</h2>
+          <div class="flex">
+            <span class="">적용쿠폰:<span> 없음</span></span>
+            <button
+              class="btn btn-sm btn-gray text-sm ml-auto text-white flex-shrink-0"
+            >
+              쿠폰 선택
+            </button>
+          </div>
+          <div class="flex justify-between">
+            <span>쿠폰 할인 금액</span>
+            <span class="font-bold">0원</span>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="flex col gap-2 py-2">
+          <h2 class="font-bold text-xl">적립금</h2>
+          <div class="flex gap-1">
+            <div class="input-with-button">
+              <input type="text" />
+              <button
+                class="btn btn-sm btn-gray text-sm ml-auto text-white flex-shrink-0"
+              >
+                전액 사용
+              </button>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <span>적립금 할인 금액</span>
+            <span class="font-bold">0원</span>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="flex col gap-2 py-2">
+          <h2 class="font-bold text-xl">결제 금액</h2>
+          <div class="gray-box">
+            <div class="flex justify-between">
+              <span class="font-bold">상품 금액</span>
+              <span>10,800원</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-bold">쿠폰 할인 금액</span>
+              <span>0원</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-bold">적립금 할인 금액</span>
+              <span>-1,000원</span>
+            </div>
+            <div class="flex justify-between mt-2">
+              <span class="font-bold">총 결제 금액</span>
+              <span class="font-bold text-primary text-lg">9,800원</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hr"></div>
+
+        <div class="flex col gap-2 py-2">
+          <h2 class="font-bold text-xl">결제 수단</h2>
+          <div class="flex gap-2">
+            <button class="pay-method kakao">
+              <span class="icon"></span>
+              <span class="name">카카오 페이</span>
+            </button>
+            <button class="pay-method naver">
+              <span class="icon"></span>
+              <span class="name">네이버 페이</span>
+            </button>
+            <button class="pay-method toss">
+              <span class="icon"></span>
+              <span class="name">토스 페이</span>
+            </button>
+            <button class="pay-method card">
+              <span class="icon"></span>
+              <span class="name">카드</span>
+            </button>
+          </div>
+        </div>
+        <div class="mt-4">
+          <button class="btn btn-lg btn-full text-lg">결제하기</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
