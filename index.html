@@ -1,338 +1,699 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/reset.css">
-    <link rel="stylesheet" href="assets/css/global.css">
-    <title>이심팜 퍼블리싱</title>
-    <style>
-      #publishing-guide {
-        padding: 3rem;
+    <title>이심팜 퍼블리싱 가이드</title>
+
+    <link rel="stylesheet" href="assets/css/reset.css" />
+
+    <style type="text/css">
+      * {
+        word-wrap: break-word;
       }
-      table {
-        width: 100%;
-        min-width: 320px;
-        max-width: 768px;
+      body {
+        background-color: #f4f5f6;
+      }
+      .now {
+        max-width: 600px;
         margin: 0 auto;
-        border-top: 2px solid #333;
+        padding: 50px 0;
       }
-      table caption {
-        font-size: 1.5rem;
-        font-weight: bold;
-        margin-bottom: 1rem;
+      .now .flex {
+        margin-bottom: 20px;
       }
-      table caption span {
-        font-size: 14px;
-        text-align: right;
+      .now .flex span:first-child {
+        padding: 0 15px;
+        letter-spacing: -1px;
+        font-size: 28px;
+        font-family: "ONE Mobile Title";
+      }
+
+      h1 span {
+        margin-left: 5px;
+        color: #999;
+        font-size: 20px;
+      }
+      h1 em {
+        margin-left: 5px;
+        color: #1b4354;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        border-bottom: 1px solid #1cbf97;
+      }
+
+      .noti {
+        margin-bottom: 5px;
+        padding: 0 15px;
+        color: #89b2c8;
+        font-size: 15px;
+      }
+
+      table {
+        table-layout: fixed;
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 100%;
       }
       table th {
-        padding: 1rem;
-        border-bottom: 1px solid #d9d9d9;
+        padding: 5px 0;
+        background: #e8e8e8;
       }
       table td {
-        padding: 1rem;
-        text-align: center;
-        border: 1px solid #d9d9d9;
+        background-color: #fff;
+        border-bottom: 1px solid #e2e2e2;
       }
-      table td:first-child {
-        border-left: 0
+
+      table td.active {
+        background-color: #f9f9f9;
       }
-      table td:last-child {
-        border-right: 0
-      }
-      table td.link {
-        
-      }
+
       a {
-        text-decoration: underline;
-        color: steelblue;
+        display: flex;
+        padding: 1rem;
+        font-size: 16px;
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+      .page {
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+      }
+      .route {
+        color: #9e9e9e;
+        font-size: 13px;
+      }
+
+      .counts {
+        position: relative;
+        border-right: 1px solid #e2e2e2;
+        font-size: 13px;
+        text-align: center;
+        z-index: 100;
+        background-color: #1cbf97;
+        color: #fff;
+        font-weight: bold;
+      }
+      .etc {
+        font-size: 13px;
+      }
+      em {
+        color: #ca1818;
+      }
+
+      .heading {
+        padding: 5px 20px;
+        background-color: #3a6157;
+        color: #fff;
+        font-size: 23px;
+        text-align: left;
+        font-family: "ONE Mobile Title";
+      }
+      .etc {
+        margin-top: 5px;
+        font-size: 13px;
+        padding: 1rem 0 0;
+        border-top: 1px dashed #e2e2e2;
+        color: #1cbf97;
+        font-size: 13px;
+        text-align: left;
+      }
+      .etc--popup:after {
+        content: "팝업";
+        display: inline-block;
+        padding: 2px 7px;
+        background-color: #1cbf97;
+        -webkit-border-radius: 5px;
+        -ms-border-radius: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        color: #fff;
+        vertical-align: middle;
+      }
+
+      .utils {
+        display: block;
+        padding: 5px 10px;
+        font-size: 0;
+        text-align: right;
+      }
+      .util {
+        display: inline-block;
+        position: relative;
+        padding-left: 15px;
+        font-size: 15px;
+        color: #333;
+      }
+      .util:before {
+        content: " ";
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        -webkit-border-radius: 10px;
+        -ms-border-radius: 10px;
+        border-radius: 10px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+      }
+      .util.util-1:before {
+        background-color: #666;
+      }
+      .util.util-2:before {
+        background-color: #c5c5c5;
+      }
+      .util.util-3:before {
+        background-color: #1cbf97;
+      }
+      .util + .util {
+        margin-left: 15px;
+      }
+
+      .end {
+        background-color: #c9c9c9;
+        color: #fff;
+        font-weight: bold;
+      }
+      .pop {
+        background-color: #066592;
+      }
+      .modify {
+        background-color: #ca1818;
+        color: #fff;
+        font-weight: bold;
+      }
+      table td.end,
+      table td.end + td {
+        opacity: 1;
+      }
+
+      .c-section {
+        padding: 0 10px;
+      }
+      .c-section + .c-section {
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <div id="publishing-guide">
-      <table>
-        <caption>
-          <h1>eSimFarm:이심팜 퍼블리싱 가이드</h1>
-          <span>작성자 : 김혜미</span>
-        </caption>
-        <thead>
-          <tr>
-            <th>대분류</th>
-            <th>소분류</th>
-            <th>파일명</th>
-            <th>수정일</th>
-            <th>비고</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td rowspan="3">메인</td>
-            <td></td>
-            <td class="link"><a href="html/main.html" target="_blank">html/main.html</a></td>
-            <td></td>
-            <td rowspan="12">1차(01/06)</td>
-          </tr>
-          <tr>
-            <td>알림</td>
-            <td class="link"><a href="html/noti.html" target="_blank">html/noti.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>나라 선택</td>
-            <td class="link"><a href="html/productsList.html" target="_blank">html/productsList.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>검색 리스트</td>
-            <td></td>
-            <td class="link"><a href="html/popup/selectCountry.html" target="_blank">html/popup/selectCountry.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>검색 리스트</td>
-            <td>필터</td>
-            <td class="link"><a href="html/popup/productsFilters.html" target="_blank">html/popup/productsFilters.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>메뉴</td>
-            <td></td>
-            <td class="link"><a href="html/menu.html" target="_blank">html/menu.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>내비</td>
-            <td></td>
-            <td class="link"><a href="js/nav.js">js/nav.js</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>공지사항</td>
-            <td>리스트</td>
-            <td class="link"><a href="html/noticeList.html" target="_blank">html/noticeList.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>공지사항</td>
-            <td>디테일</td>
-            <td class="link"><a href="html/noticeDetail.html" target="_blank">html/noticeDetail.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>이벤트</td>
-            <td>리스트</td>
-            <td class="link"><a href="html/eventList.html" target="_blank">html/eventList.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>이벤트</td>
-            <td>디테일</td>
-            <td class="link"><a href="html/eventDetail.html" target="_blank">html/eventDetail.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>사용방법</td>
-            <td></td>
-            <td class="link"><a href="html/howToUse.html" target="_blank">html/howToUse.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>내 eSim</td>
-            <td></td>
-            <td class="link"><a href="html/myESim.html" target="_blank">html/myESim.html</a></td>
-            <td></td>
-            <td rowspan="32">2차(01/??)</td>
-          </tr>
-          <tr>
-            <td>데이터 조회</td>
-            <td></td>
-            <td class="link"><a href="html/data.html" target="_blank">html/data.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>QR 확인</td>
-            <td></td>
-            <td class="link"><a href="html/qr.html" target="_blank">html/qr.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td></td>
-            <td class="link"><a href="html/myPage.html" target="_blank">html/myPage.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>적립금</td>
-            <td class="link"><a href="html/mileage.html" target="_blank">html/mileage.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>쿠폰</td>
-            <td class="link"><a href="html/coupon.html" target="_blank">html/coupon.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>구매 내역</td>
-            <td class="link"><a href="html/paymentList.html" target="_blank">html/paymentList.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>리뷰 쓰기</td>
-            <td class="link"><a href="html/review-write.html" target="_blank">html/review-write.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>주문 상세</td>
-            <td class="link"><a href="html/oderDetails.html" target="_blank">html/oderDetails.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>친구 추천</td>
-            <td class="link"><a href="html/referral.html" target="_blank">html/referral.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>내 정보 수정</td>
-            <td class="link"><a href="html/myInfoEdit.html" target="_blank">html/myInfoEdit.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>마이페이지</td>
-            <td>알림 설정</td>
-            <td class="link"><a href="html/alarmSetting.html" target="_blank">html/alarmSetting.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>모달</td>
-            <td>버튼</td>
-            <td class="link"><a href="html/modal/button.html" target="_blank">html/modal/button.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>모달</td>
-            <td>일반</td>
-            <td class="link"><a href="html/modal/info.html" target="_blank">html/modal/info.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>모달</td>
-            <td>쿠폰 적용</td>
-            <td class="link"><a href="html/modal/coupon.html" target="_blank">html/modal/coupon.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>고객센터</td>
-            <td>자주묻는 질문</td>
-            <td class="link"><a href="html/faq.html" target="_blank">html/faq.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>고객센터</td>
-            <td>1:1 문의</td>
-            <td class="link"><a href="html/qna.html" target="_blank">html/qna.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>고객센터</td>
-            <td>이메일 상담</td>
-            <td class="link"><a href="html/qna-email.html" target="_blank">html/qna-email.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>어카운트</td>
-            <td>로그인</td>
-            <td class="link"><a href="html/login.html" target="_blank">html/login.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>어카운트</td>
-            <td>휴대폰 인증</td>
-            <td class="link"><a href="html/signUp01.html" target="_blank">html/signUp01.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>어카운트</td>
-            <td>회원가입</td>
-            <td class="link"><a href="html/signUp02.html" target="_blank">html/signUp02.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>어카운트</td>
-            <td>아이디/비밀번호 찾기</td>
-            <td class="link"><a href="html/findIdPw.html" target="_blank">html/findIdPw.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>어카운트</td>
-            <td>회원탈퇴</td>
-            <td class="link"><a href="html/withdrawal.html" target="_blank">html/withdrawal.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>상품</td>
-            <td>결제하기</td>
-            <td class="link"><a href="html/parchase.html" target="_blank">html/parchase.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>모달</td>
-            <td>eSIM 사용 가능 기종</td>
-            <td class="link"><a href="html/modal/device.html" target="_blank">html//modal/device.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>모달</td>
-            <td>쿠폰 선택</td>
-            <td class="link"><a href="html/modal/coupon.html" target="_blank">html//modal/coupon.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>상품</td>
-            <td>상세</td>
-            <td class="link"><a href="html/productDetail.html" target="_blank">html/productDetail.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>상품</td>
-            <td>리뷰 확인</td>
-            <td class="link"><a href="html/reviews.html" target="_blank">html/reviews.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>약관</td>
-            <td></td>
-            <td class="link"><a href="html/terms.html" target="_blank">html/terms.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>지원 단말기 확인</td>
-            <td></td>
-            <td class="link"><a href="html/checkDevice.html" target="_blank">html/checkDevice.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>로딩</td>
-            <td></td>
-            <td class="link"><a href="html/loading.html" target="_blank">html/loading.html</a></td>
-            <td></td>
-          </tr>
-          <tr>
-            <td>스플래시</td>
-            <td></td>
-            <td class="link"><a href="html/splash.html" target="_blank">html/splash.html</a></td>
-            <td></td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="now">
+      <div class="flex">
+        <span>eSIM farm 퍼블리싱 가이드</span>
+        <span>by. 김혜미</span>
+      </div>
+
+      <div class="c-section">
+        <div class="utils">
+          <div class="util util-1">화면명</div>
+          <div class="util util-2">경로</div>
+          <div class="util util-3">비고</div>
+        </div>
+        <!-- 홈 -->
+        <table>
+          <colgroup>
+            <col style="width: 40px" />
+          </colgroup>
+          <thead>
+            <th class="heading" colspan="2">홈</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">메인(헤더, 푸터, 하단 탭)</div>
+                  <div class="route">html/main.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">알림</div>
+                  <div class="route">html/noti.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">메뉴</div>
+                  <div class="route">html/menu.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">공지사항 목록</div>
+                  <div class="route">html/noticeList.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">공지사항 상세</div>
+                  <div class="route">html/noticeDetail.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">이벤트 목록</div>
+                  <div class="route">html/eventList.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">이벤트 상세</div>
+                  <div class="route">html/eventDetail.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">사용 방법</div>
+                  <div class="route">html/howToUse.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">내 eSim</div>
+                  <div class="route">html/myESim.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">내 eSim - 데이터 조회</div>
+                  <div class="route">html/data.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">내 eSim - QR 확인</div>
+                  <div class="route">html/qrCode.html</div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 상품 -->
+        <table>
+          <colgroup>
+            <col style="width: 40px" />
+          </colgroup>
+          <thead>
+            <th class="heading" colspan="2">상품</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page etc--popup">나라 검색 리스트</div>
+                  <div class="route">html/popup/selectCountry.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts modify"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">상품 리스트</div>
+                  <div class="route">html/productsList.html</div>
+                  <div class="etc">
+                    업데이트 ::: div list에 scrollbar 클래스 추가
+                  </div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">결제하기</div>
+                  <div class="route">html/parchase.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">eSIM 사용 가능 기종</div>
+                  <div class="route">html/modal/device.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page etc--popup">사용 가능 쿠폰 선택</div>
+                  <div class="route">html/modal/coupon.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">상품 상세 페이지</div>
+                  <div class="route">html/productDetail.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">리뷰 확인</div>
+                  <div class="route">html/reviews.html</div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 마이페이지 -->
+        <table>
+          <colgroup>
+            <col style="width: 40px" />
+          </colgroup>
+          <thead>
+            <th class="heading" colspan="2">마이페이지</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">마이페이지</div>
+                  <div class="route">html/mypage.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">적립금</div>
+                  <div class="route">html/mileage.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">쿠폰</div>
+                  <div class="route">html/coupon.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">구매 내역</div>
+                  <div class="route">html/paymentsList.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">리뷰 쓰기</div>
+                  <div class="route">html/review-write.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">주문 상세</div>
+                  <div class="route">html/orderDetails.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">친구 추천</div>
+                  <div class="route">html/referral.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">내 정보 수정</div>
+                  <div class="route">html/myInfoEdit.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">알림 설정</div>
+                  <div class="route">html/alarmSetting.html</div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 고객센터 -->
+        <table>
+          <colgroup>
+            <col style="width: 40px" />
+          </colgroup>
+          <thead>
+            <th class="heading" colspan="2">고객센터</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">자주묻는 질문</div>
+                  <div class="route">html/faq.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">1:1 문의</div>
+                  <div class="route">html/qna.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">이메일 상담</div>
+                  <div class="route">html/qna-email.html</div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 계정 -->
+        <table>
+          <colgroup>
+            <col style="width: 40px" />
+          </colgroup>
+          <thead>
+            <th class="heading" colspan="2">계정</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">로그인</div>
+                  <div class="route">html/login.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">휴대폰 인증</div>
+                  <div class="route">html/signUp01.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">회원가입</div>
+                  <div class="route">html/signUp02.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">아이디/비밀번호 찾기</div>
+                  <div class="route">html/findIdPw.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">회원탈퇴</div>
+                  <div class="route">html/withdrawal.html</div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <!-- 기타 -->
+        <table>
+          <colgroup>
+            <col style="width: 40px" />
+          </colgroup>
+          <thead>
+            <th class="heading" colspan="2">기타</th>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">약관</div>
+                  <div class="route">html/terms.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">지원 단말기 확인</div>
+                  <div class="route">html/checkDevice.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">스플래시 이미지</div>
+                  <div class="route">html/splash.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">로딩</div>
+                  <div class="route">html/loading.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page etc--popup">기본 모달</div>
+                  <div class="route">html/modal/info.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page etc--popup">버튼 모달(로그아웃 등)</div>
+                  <div class="route">html/modal/button.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">알림톡</div>
+                  <div class="route">html/share/qr.html</div>
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td class="counts end"></td>
+              <td>
+                <a href="#" target="_blank">
+                  <div class="page">알림톡-사용량 확인</div>
+                  <div class="route">html/share/data.html</div>
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
+    <script type="text/javascript">
+      document.addEventListener("DOMContentLoaded", function () {
+        // c-section 내부 table의 각 행 번호 추가
+        document.querySelectorAll(".c-section").forEach(function (section) {
+          section
+            .querySelectorAll("table tbody tr")
+            .forEach(function (row, index) {
+              const countsCell = row.querySelector(".counts");
+              if (countsCell) {
+                countsCell.textContent = index + 1;
+              }
+            });
+        });
+
+        // route 처리
+        document.querySelectorAll(".route").forEach(function (route) {
+          const page = route.textContent;
+          if (route.parentElement) {
+            route.parentElement.setAttribute("href", page);
+          }
+        });
+      });
+    </script>
   </body>
 </html>
