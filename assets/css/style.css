@@ -243,6 +243,7 @@ footer .sns.instagram {
   padding: 1rem 2rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   gap: 1rem;
 }
 .noti-container .item .cont {
@@ -648,7 +649,8 @@ footer .sns.instagram {
   gap: 1rem;
   align-items: center;
 }
-.menu-container header .rt p {
+.menu-container header .rt p,
+.menu-container header .rt span {
   font-size: 18px;
 }
 .menu-container header .rt .close {
@@ -787,14 +789,14 @@ footer .sns.instagram {
 }
 .event-container .thumbnail img {
   width: 100%;
-  height: 10rem;
+  /* height: 10rem; */
   border-radius: 10px;
 }
 .event-container .detail .contents {
   display: flex;
   flex-direction: column;
   gap: 2rem;
-  padding-bottom: 5rem;
+  padding: 2rem 0 5rem;
 }
 .event-container .detail .contents img {
   border-radius: 10px;
@@ -980,7 +982,7 @@ footer .sns.instagram {
 .mileage-container {
   display: flex;
   flex-direction: column;
-  min-height: calc(100vh - 193px);
+  min-height: calc(100vh - 195px);
 }
 .mileage-container .item {
   display: flex;
@@ -1113,6 +1115,7 @@ footer .sns.instagram {
   gap: 0.5rem;
   align-items: center;
   padding: 1rem 1.5rem;
+  cursor: pointer;
 }
 .faq-container .icon {
   display: block;
@@ -1210,7 +1213,7 @@ footer .sns.instagram {
   background: url(../images/common/arrow-right-bk.png) center / contain
     no-repeat;
 }
-.qna-container .email {
+.qna-container form.email {
   display: flex;
   min-height: calc(100vh - 120px);
   height: 100%;
@@ -1444,6 +1447,7 @@ footer .sns.instagram {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-position: center;
 }
 .product-detail-container .banner.japan {
   background-image: url(../images/main/country/bg-japan.png);
@@ -1480,7 +1484,7 @@ footer .sns.instagram {
 
 /* 리뷰확인 */
 .reviews-container {
-  min-height: calc(100vh - 168px);
+  min-height: calc(100vh - 177px);
   background-color: var(--blue-gray);
   padding: 1.5rem;
   display: flex;
