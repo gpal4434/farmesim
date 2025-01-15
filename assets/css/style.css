@@ -1296,6 +1296,13 @@ footer .sns.instagram {
   height: 20px;
   background: url(../images/common/kakao.png) center / contain no-repeat;
 }
+
+.login-container .google:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url(../images/common/google-logo.png) center / contain no-repeat;
+}
 .login-container .account-btn {
   display: flex;
   align-items: center;
